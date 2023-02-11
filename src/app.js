@@ -23,7 +23,8 @@ function renderTours(tours) {
         }
         document.getElementById("container").innerHTML += `
         
-        <div class="h-64 bg-white shadow-lg rounded-lg overflow-hidden m-5 grid grid-cols-2"> 
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden relative m-5 h-[42rem] grid lg:h-60 md:h-72 md:grid-cols-2 sm:grid-cols-1"> 
+    
         <img class="h-full bg-cover bg-center" src="${tour.image}"</>
         <span class="m-5">
         <div class="flex font-medium text-xl">${tour.hotelName}<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-600 ml-2 mr-1">
@@ -35,8 +36,9 @@ function renderTours(tours) {
           ${duration} дн.</div>
           <br> 
           <p class="flex justify-end gap-4 text-yellow-600 font-medium text-xl">${tour.price} руб.</p>
-          <button class="btn m-2 center">Подробнее</button><button class="btn">Избранное</button>
+          <div class="absolute bottom-0"><button class="btn m-2 center">Подробнее</button><button class="btn">Избранное</button></div>
           
+    
        </div>
        </span>
        `
